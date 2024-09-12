@@ -120,36 +120,26 @@
 
     <script>
         const questions = [
-            {
-                question: "O que é um domínio no contexto do Active Directory?",
-                options: [
-                    "Estrutura física que armazena arquivos",
-                    "Estrutura lógica que centraliza o gerenciamento de recursos",
-                    "Um servidor dedicado a rodar aplicações",
-                    "Nenhuma das alternativas"
-                ],
-                correct: 1
-            },
-            {
-                question: "Qual é a função da base de dados NTDS.dit?",
-                options: [
-                    "Armazenar logs do sistema",
-                    "Manter todas as informações sobre os objetos do AD",
-                    "Controlar acessos de rede",
-                    "Gerenciar a estrutura de rede física"
-                ],
-                correct: 1
-            },
-            {
-                question: "O que são objetos no Active Directory?",
-                options: [
-                    "Entidades que representam recursos na rede",
-                    "Atributos que definem políticas de segurança",
-                    "Logs de auditoria do sistema",
-                    "Nenhuma das alternativas"
-                ],
-                correct: 0
-            }
+            { question: "O que é um domínio no contexto do Active Directory?", options: [ "Estrutura física que armazena arquivos", "Estrutura lógica que centraliza o gerenciamento de recursos", "Um servidor dedicado a rodar aplicações", "Nenhuma das alternativas" ], correct: 1 },
+            { question: "Qual é a função da base de dados NTDS.dit?", options: [ "Armazenar logs do sistema", "Manter todas as informações sobre os objetos do AD", "Controlar acessos de rede", "Gerenciar a estrutura de rede física" ], correct: 1 },
+            { question: "O que são objetos no Active Directory?", options: [ "Entidades que representam recursos na rede", "Atributos que definem políticas de segurança", "Logs de auditoria do sistema", "Nenhuma das alternativas" ], correct: 0 },
+            { question: "Qual é a principal função dos Controladores de Domínio (DCs)?", options: [ "Autenticar e autorizar usuários e computadores na rede", "Controlar o tráfego de rede", "Gerenciar políticas de backup", "Monitorar a performance dos servidores" ], correct: 0 },
+            { question: "Qual dos itens abaixo é um serviço de diretório da Microsoft?", options: [ "LDAP", "Active Directory", "MySQL", "SQL Server" ], correct: 1 },
+            { question: "O que é uma árvore de domínio?", options: [ "Uma estrutura física de cabeamento", "Uma estrutura hierárquica de domínios", "Um grupo de servidores em cluster", "Uma base de dados de usuários" ], correct: 1 },
+            { question: "Qual a função das relações de confiança transitiva entre domínios?", options: [ "Permitir a comunicação direta entre dois servidores", "Permitir que diferentes domínios compartilhem informações de autenticação e autorização", "Compartilhar arquivos entre domínios", "Gerenciar o acesso a redes externas" ], correct: 1 },
+            { question: "O que é um namespace de domínio?", options: [ "Um espaço onde todos os nomes de domínio, subdomínios e objetos do diretório são definidos", "Um servidor dedicado a armazenar arquivos de log", "Um método de replicação de dados", "Uma estrutura de armazenamento de senhas" ], correct: 0 },
+            { question: "O que é uma floresta de domínio?", options: [ "Conjunto de servidores em uma única rede", "Conjunto de uma ou mais árvores que compartilham o catálogo global", "Uma estrutura de backup de dados", "Um grupo de usuários e computadores" ], correct: 1 },
+            { question: "Qual a função do Global Catalog no Active Directory?", options: [ "Armazenar arquivos de log", "Contém uma visão parcial de todos os objetos na floresta", "Gerenciar a replicação de dados entre servidores", "Aplicar políticas de grupo" ], correct: 1 },
+            { question: "O que são grupos universais no Active Directory?", options: [ "Grupos que podem incluir membros de qualquer domínio dentro da mesma floresta", "Grupos restritos a um único servidor", "Grupos de usuários apenas para listas de e-mail", "Nenhuma das alternativas" ], correct: 0 },
+            { question: "O que são Unidades Organizacionais (OU)?", options: [ "Contêineres hierárquicos dentro de um domínio", "Servidores dedicados ao armazenamento de dados", "Grupos de usuários", "Nenhuma das alternativas" ], correct: 0 },
+            { question: "Qual é a função das contas de usuários no Active Directory?", options: [ "Permitir que usuários acessem recursos da rede", "Armazenar logs de rede", "Gerenciar políticas de backup", "Controlar o tráfego de rede" ], correct: 0 },
+            { question: "O que é importante para a proteção das contas de administrador?", options: [ "Senhas fortes e políticas de bloqueio", "Desabilitar o servidor principal", "Aplicar atualizações de software regularmente", "Nenhuma das alternativas" ], correct: 0 },
+            { question: "O que são grupos de usuários?", options: [ "Coleção de contas de usuários", "Atributos do Active Directory", "Logs de sistema", "Servidores dedicados a backups" ], correct: 0 },
+            { question: "O que é uma conta de computador?", options: [ "Uma representação de uma estação de trabalho no domínio", "Um servidor dedicado a rodar aplicativos", "Um grupo de usuários", "Nenhuma das alternativas" ], correct: 0 },
+            { question: "O que é um método de controle de acesso no Active Directory?", options: [ "Definição de permissões e direitos de usuários", "Monitoramento de tráfego de rede", "Backup de arquivos", "Nenhuma das alternativas" ], correct: 0 },
+            { question: "O que caracteriza uma relação de confiança transitiva?", options: [ "A confiança é estabelecida entre dois domínios e se estende a outros domínios confiáveis", "A confiança é restrita a um único servidor", "A confiança é gerada apenas para arquivos", "Nenhuma das alternativas" ], correct: 0 },
+            { question: "O que define o escopo de um grupo universal no AD?", options: [ "A capacidade de incluir membros de qualquer domínio dentro da floresta", "A restrição a um único servidor", "A inclusão de logs de auditoria", "Nenhuma das alternativas" ], correct: 0 },
+            { question: "Qual é a principal vantagem do uso de OUs no Active Directory?", options: [ "Facilitam a organização e delegação de tarefas administrativas", "Permitem o backup automático de dados", "Aumentam o desempenho de rede", "Nenhuma das alternativas" ], correct: 0 }
         ];
 
         let currentQuestionIndex = 0;
@@ -229,4 +219,5 @@
     </script>
 </body>
 </html>
+
 
