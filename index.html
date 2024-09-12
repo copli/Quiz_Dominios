@@ -139,8 +139,27 @@
             { question: "O que é um método de controle de acesso no Active Directory?", options: [ "Definição de permissões e direitos de usuários", "Monitoramento de tráfego de rede", "Backup de arquivos", "Nenhuma das alternativas" ], correct: 0 },
             { question: "O que caracteriza uma relação de confiança transitiva?", options: [ "A confiança é estabelecida entre dois domínios e se estende a outros domínios confiáveis", "A confiança é restrita a um único servidor", "A confiança é gerada apenas para arquivos", "Nenhuma das alternativas" ], correct: 0 },
             { question: "O que define o escopo de um grupo universal no AD?", options: [ "A capacidade de incluir membros de qualquer domínio dentro da floresta", "A restrição a um único servidor", "A inclusão de logs de auditoria", "Nenhuma das alternativas" ], correct: 0 },
-            { question: "Qual é a principal vantagem do uso de OUs no Active Directory?", options: [ "Facilitam a organização e delegação de tarefas administrativas", "Permitem o backup automático de dados", "Aumentam o desempenho de rede", "Nenhuma das alternativas" ], correct: 0 }
+            { question: "Qual é a principal vantagem do uso de OUs no Active Directory?", options: [ "Facilitam a organização e delegação de tarefas administrativas", "Permitem o backup automático de dados", "Aumentam o desempenho de rede", "Nenhuma das alternativas" ], correct: 0 },
+            // Novas perguntas adicionadas aqui
+            { question: "Quais são os componentes principais do Active Directory?", options: [ "Domínios, OUs, Florestas, Sites", "Controladores de domínio, Florestas, Grupos", "Políticas de backup, Monitoramento, Auditoria", "Apenas Sites e Florestas" ], correct: 0 },
+            { question: "O que significa NTDS em NTDS.dit?", options: [ "Network Directory Service", "New Technology Directory Services", "Network Tree Directory System", "Nenhuma das alternativas" ], correct: 1 },
+            { question: "Qual é a função de um controlador de domínio (DC)?", options: [ "Controlar a replicação entre servidores", "Executar scripts de backup", "Autenticar e autorizar usuários e máquinas", "Controlar o acesso à internet" ], correct: 2 },
+            { question: "O que é uma relação de confiança no Active Directory?", options: [ "Permissão para um domínio acessar os recursos de outro", "Um backup de usuários", "Permitir que dois servidores compartilhem recursos", "Nenhuma das alternativas" ], correct: 0 },
+            { question: "Qual é o propósito de uma Floresta no AD?", options: [ "Organizar as políticas de backup", "Definir o espaço de nomes da organização", "Conectar domínios físicos", "Gerenciar logs e auditoria" ], correct: 1 },
+            { question: "O que é um Grupo de Segurança no Active Directory?", options: [ "Um grupo usado para listas de distribuição", "Uma coleção de computadores", "Um grupo que concede permissões de acesso a recursos", "Uma conta de usuário" ], correct: 2 },
+            { question: "Qual é a vantagem de usar OUs no Active Directory?", options: [ "Permitir a delegação de administração", "Aumentar o desempenho de backup", "Reduzir o tempo de replicação", "Gerenciar domínios físicos" ], correct: 0 },
+            { question: "Como uma conta de usuário é representada no Active Directory?", options: [ "Como um objeto", "Como um grupo", "Como um domínio", "Nenhuma das alternativas" ], correct: 0 },
+            { question: "O que define a herança de permissões no Active Directory?", options: [ "Permissões que são automaticamente aplicadas a subpastas", "Políticas que se replicam entre servidores", "Permissões aplicadas apenas a usuários", "A auditoria de logs" ], correct: 0 },
+            { question: "O que é um namespace contínuo em uma árvore de domínios?", options: [ "Todos os domínios na árvore compartilham um espaço de nomes", "Domínios têm espaços de nomes separados", "Os domínios compartilham políticas de auditoria", "Nenhuma das alternativas" ], correct: 0 },
         ];
+
+        // Função para embaralhar as perguntas
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
 
         let currentQuestionIndex = 0;
         let correctAnswers = 0;
@@ -167,6 +186,7 @@
         });
 
         function startQuiz() {
+            shuffle(questions);  // Embaralhar perguntas ao iniciar o quiz
             currentQuestionIndex = 0;
             correctAnswers = 0;
             viewedQuestions = 0;
